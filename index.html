@@ -4,20 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Mono | A minimal to-do list.</title>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <title>Mono | A minimal to-do list</title>
 </head>
 <body>
     <section class="header-section">
         <div class="container-fluid">
             <div class="header">
                 <h1>All tasks</h1>
-                <button>Create a task</button>
+                <button class="btn-primary">Create a task</button>
             </div>
-            <div>
+            <div class="filters-and-whatnot"> 
+                <!-- change the name of the class, obviously -->
                 <!-- filters based on status - completed, not completed? -->
             </div>
             <!-- all tasks are shown here, sorted by day -->
+            <div class="tasks-list">
+                <div class="task-item">
+                    <i class="icon ph-thin ph-circle"></i>
+                    <p class="task-content">Task name shows up here.</p>
+                </div>
 
+                <div class="task-item">
+                    <i class="icon ph-thin ph-circle"></i>
+                    <p class="task-content">Task name shows up here.</p>
+                </div>
+                <div class="task-item">
+                    <i class="icon ph-thin ph-circle"></i>
+                    <p class="task-content">Task name shows up here.</p>
+                </div>
+                <div class="task-item">
+                    <i class="icon ph-thin ph-circle"></i>
+                    <p class="task-content">Task name shows up here.</p>
+                </div>
+                <div class="task-item">
+                    <i class="icon ph-thin ph-circle"></i>
+                    <p class="task-content">Task name shows up here.</p>
+                </div>
+            </div>
         </div>
     </section>
 </body>

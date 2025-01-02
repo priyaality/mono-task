@@ -6,4 +6,71 @@
 
 body{
     background-color: var(--cream-100);
+    font-family: "PT Mono";
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.btn-primary{
+    /* About the button text */
+    font-family: "PT Mono";
+    letter-spacing: -4%;
+    line-height: 100%;
+    color: var(--cream-100);
+    font-size: 1rem;
+    /* About the button itself */
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: inline-flex;
+    background-color: var(--brown-100);
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.container-fluid{
+    width: 688px;
+    height: 100vh;
+    /* urdl */
+    padding: 0px 24px 0px 24px;
+    /* border-left: var(--brown-10) 1px;
+    border-right: var(--brown-10) 1px; */
+    border-style: hidden solid hidden solid;
+    border-color: var(--brown-10);
+}
+
+.header-section{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    color: var(--brown-100);
+    font-size: 24px;
+}
+
+.task-item{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 12px 0px;
+    gap: 8px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: var(--brown-10);
+}
+
+.task-content{
+    color: var(--brown-100);
+    margin: 0;
+    font-family: "PT Mono";
+    font-size: 16px;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: -1px;
 }
