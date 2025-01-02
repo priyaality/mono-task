@@ -1,1 +1,9 @@
+:root {
+    --cream-100: #F5E7D7;
+    --brown-100: #291B0C;
+    --brown-10: #291B0C1A;
+}
 
+body{
+    background-color: var(--cream-100);
+}
