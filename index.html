@@ -31,11 +31,36 @@
 
 <div class="modal">
     <div class="modal-header">
-
+        <h6>Add a task</h6>
+        <i class="icon ph-thin ph-close"></i>
     </div>
 
     <div class="modal-body">
-
+        <!-- 3 inputs - task title, description, due date/time, tags -->
+        <form action="">
+            <div class="form-field">
+                <label for="taskName">What do you want to get done?</label>
+                <input type="text",
+                id="taskName" ,
+                name="taskName" ,
+                required ,
+                class="input-field">
+            </div>
+            <div class="form-field">
+                <label for="taskDescription">Add a description</label>
+                <input type="text",
+                id="taskDescription",
+                name="taskDescription",
+                class="input-field">
+            </div>
+            <div class="form-field">
+                <label for="dueDate">When this this due?</label>
+                <input type="datetime-local",
+                name="dueDate",
+                id="dueDate"
+                class="input-field">
+            </div>
+        </form>
     </div>
 
     <div class="modal-footer">

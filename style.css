@@ -74,3 +74,14 @@ body{
     line-height: 130%; /* 20.8px */
     letter-spacing: -1px;
 }
+
+.form-field{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.input-field{
+    
+}
