@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script src="script.js"></script>
     <title>Mono | A minimal to-do list</title>
 </head>
 <body>
     <section class="header-section">
         <div class="container-fluid">
             <div class="header">
-                <h1>All tasks</h1>
-                <button id="createTaskBtn" class="btn-primary">Create a task</button>
+                <p>Mono</p>
+                <button id="createTaskBtn" class="btn-primary" onclick="openModal()">Create a task</button>
             </div>
             <div class="filters-and-whatnot"> 
                 <!-- change the name of the class, obviously -->
                 <!-- filters based on status - completed, not completed? -->
             </div>
             <!-- all tasks are shown here, sorted by day -->
+            <h3>All tasks</h3>
             <div class="tasks-list">
                 <div class="task-item">
                     <i class="icon ph-thin ph-circle"></i>
@@ -27,46 +32,46 @@
             </div>
         </div>
     </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-header">
+            <h3>Add a task</h3>
+            <button onclick="closeModal()"><i class="icon ph-thin ph-close"></i></button>
+        </div>
+    
+        <div class="modal-body">
+            <!-- 3 inputs - task title, description, due date/time, tags -->
+            <form class="create-task", action="">
+                <div class="form-field">
+                    <label for="taskName">What do you want to get done?</label>
+                    <input type="text",
+                    id="taskName" ,
+                    name="taskName" ,
+                    required ,
+                    class="input-field">
+                </div>
+                <div class="form-field">
+                    <label for="taskDescription">Add a description</label>
+                    <input type="text",
+                    id="taskDescription",
+                    name="taskDescription",
+                    class="input-field">
+                </div>
+                <div class="form-field">
+                    <label for="dueDate">When this this due?</label>
+                    <input type="datetime-local",
+                    name="dueDate",
+                    id="dueDate"
+                    class="input-field">
+                </div>
+            </form>
+        </div>
+    
+        <div class="modal-footer">
+            <button class="btn-primary">add task</button>
+        </div>
+    
+    </div>
 </body>
-
-<div class="modal">
-    <div class="modal-header">
-        <h6>Add a task</h6>
-        <i class="icon ph-thin ph-close"></i>
-    </div>
-
-    <div class="modal-body">
-        <!-- 3 inputs - task title, description, due date/time, tags -->
-        <form action="">
-            <div class="form-field">
-                <label for="taskName">What do you want to get done?</label>
-                <input type="text",
-                id="taskName" ,
-                name="taskName" ,
-                required ,
-                class="input-field">
-            </div>
-            <div class="form-field">
-                <label for="taskDescription">Add a description</label>
-                <input type="text",
-                id="taskDescription",
-                name="taskDescription",
-                class="input-field">
-            </div>
-            <div class="form-field">
-                <label for="dueDate">When this this due?</label>
-                <input type="datetime-local",
-                name="dueDate",
-                id="dueDate"
-                class="input-field">
-            </div>
-        </form>
-    </div>
-
-    <div class="modal-footer">
-
-    </div>
-
-</div>
 
 </html>
