@@ -33,10 +33,13 @@
         </div>
     </section>
 
+    <!-- MODAL UI -->
     <div id="modal" class="modal">
         <div class="modal-header">
-            <h3>Add a task</h3>
-            <button onclick="closeModal()"><i class="icon ph-thin ph-close"></i></button>
+            <p>Add a task</p>
+            <button class="btn-icon" onclick="closeModal()">
+                <i class="icon ph-thin ph-x"></i>
+            </button>
         </div>
     
         <div class="modal-body">
@@ -52,10 +55,10 @@
                 </div>
                 <div class="form-field">
                     <label for="taskDescription">Add a description</label>
-                    <input type="text",
+                    <textarea type="text",
                     id="taskDescription",
                     name="taskDescription",
-                    class="input-field">
+                    class="input-field">Enter a description</textarea>
                 </div>
                 <div class="form-field">
                     <label for="dueDate">When this this due?</label>
