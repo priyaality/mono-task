@@ -1,8 +1,10 @@
 :root {
     --cream-100: #FAF0E4;
+    --white-40: #FFFFFF66;
     --brown-100: #291B0C;
     --brown-10: #291B0C1A;
     --orange-100: #FF9415;
+
 }
 
 h1{
@@ -21,23 +23,34 @@ h3{
 
 p{
     font-size: 1rem;
-    font-weight: 400;
     line-height: 130%; /* 20.8px */
-    letter-spacing: -8%;
+    /* letter-spacing: %; */
     margin: 0;
+    font-family: "Geist Mono Variable";
+    font-weight: 500;
 }
 
 body{
     background-color: var(--cream-100);
     color: var(--brown-100);
-    font-family: "Geist Mono", monospace;
+    font-family: "Geist Mono Variable";
+    font-weight: 500;
     justify-content: center;
     height: 100vh;
     margin: 0;
 }
 
+input{
+    font-family: "Geist Mono Variable";
+    font-weight: 500;
+    font-size: 1rem;
+}
+
 textarea{
     resize: none;
+    font-family: "Geist Mono Variable";
+    font-weight: 500;
+    font-size: 0.875rem;
 }
 
 .btn-primary{
@@ -58,6 +71,11 @@ textarea{
     border-radius: 32px;
     border: 1px solid var(--brown-100);
     background: var(--orange-100);
+    transition: 0.3s;
+}
+
+.btn-primary:hover{
+    background: #FFC37A;
 }
 
 .btn-icon{
@@ -108,10 +126,21 @@ textarea{
     margin: 0;
     font-size: 16px;
     line-height: 130%; /* 20.8px */
-    letter-spacing: -1px;
 }
 
 /* modal general formatting */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(48px);
+    z-index: 999;
+  }
 
 .modal{
     /* display: none; */
@@ -124,6 +153,18 @@ textarea{
     border-radius: 24px;
     background-color: var(--cream-100);
     gap: 24px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .modal-header{
@@ -132,33 +173,50 @@ textarea{
     align-items: center;
 }
 
-.form-field{
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 588px;
-}
+/* Inputs */
 
+/* for due date */
 .input-field{
+    gap: 8px;
+    width: 588px;
     display: flex;
+    flex-direction: column;
     align-self: stretch;
     padding:8px 16px 8px 16px ;
     color: var(--brown-100);
     background-color: var(--cream-100);
     border: 1px solid var(--brown-10);
     border-radius: 6px;
-
     /* urdl */
 }
 
-.input-field::focus{
-    border: 1px solid var(--brown-100);
+
+
+/* for task name and description */
+.combo-input-field{
+    display: flex;
+    align-self: stretch;
+    padding:8px 16px 8px 16px ;
+    color: var(--brown-100);
+    background-color: var(--cream-100);
+    border: 0px solid;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
-label{
+.combo-input-field:focus-visible{
+    border: none;
+    outline: none;
+    background-color: var(--white-40);
+}
+
+.combo-input{
+    display: flex;
+    flex-direction: column;
     align-self: stretch;
-    font-size: 14px;
+    color: var(--brown-100);
+    border: 1px solid var(--brown-10);
+    border-radius: 6px;
 }
 
 /* create task form */

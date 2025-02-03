@@ -202,3 +202,68 @@
   </script>
 </body>
 </html>
+
+
+
+
+<div id="modal" class="modal">
+  <div class="modal-header">
+      <p>Add a task</p>
+      <button class="btn-icon" onclick="closeModal()">
+          <i class="icon ph-thin ph-x"></i>
+      </button>
+  </div>
+
+  <div class="modal-body">
+      <!-- 3 inputs - task title, description, due date/time, tags -->
+      <form class="create-task", action="">
+          <div class="form-field">
+              <label for="taskName">What do you want to get done?</label>
+              <input type="text",
+              id="taskName" ,
+              name="taskName" ,
+              required ,
+              class="input-field">
+          </div>
+          <div class="form-field">
+              <label for="taskDescription">Add a description</label>
+              <textarea type="text",
+              id="taskDescription",
+              name="taskDescription",
+              class="input-field">Enter a description</textarea>
+          </div>
+          <div class="form-field">
+              <label for="dueDate">When this this due?</label>
+              <input type="datetime-local",
+              name="dueDate",
+              id="dueDate"
+              class="input-field">
+          </div>
+      </form>
+  </div>
+      
+  <div class="modal-footer">
+    <button class="btn-primary">Add task</button>
+  </div>
+
+</div>
+
+
+<div class="combo-input">
+  <div class="spacer"></div>
+
+  <div> <!--  task title and description -->
+    <input type="text",
+      id="taskName" ,
+      name="taskName" ,
+      required ,
+      class="input-field">
+    <textarea type="text",
+      id="taskDescription",
+      name="taskDescription",
+      class="input-field">Enter a description</textarea>
+  </div>
+
+  <div class="spacer"></div>
+
+</div>

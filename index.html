@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
     <script src="script.js"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <title>Mono | A minimal to-do list</title>
 </head>
 <body>
@@ -34,6 +37,8 @@
     </section>
 
     <!-- MODAL UI -->
+    <div id="modalOverlay" class="modal-overlay"></div>
+
     <div id="modal" class="modal">
         <div class="modal-header">
             <p>Add a task</p>
@@ -43,35 +48,27 @@
         </div>
     
         <div class="modal-body">
-            <!-- 3 inputs - task title, description, due date/time, tags -->
-            <form class="create-task", action="">
-                <div class="form-field">
-                    <label for="taskName">What do you want to get done?</label>
-                    <input type="text",
+            <div class="combo-input">
+                  <input type="text",
                     id="taskName" ,
                     name="taskName" ,
-                    required ,
-                    class="input-field">
-                </div>
-                <div class="form-field">
-                    <label for="taskDescription">Add a description</label>
-                    <textarea type="text",
+                    class="combo-input-field",
+                    placeholder="Task name">
+                  <textarea type="text",
                     id="taskDescription",
                     name="taskDescription",
-                    class="input-field">Enter a description</textarea>
-                </div>
-                <div class="form-field">
-                    <label for="dueDate">When this this due?</label>
-                    <input type="datetime-local",
-                    name="dueDate",
-                    id="dueDate"
-                    class="input-field">
-                </div>
-            </form>
+                    class="combo-input-field",
+                    placeholder="Description"></textarea>
+            </div>
+                <input type="datetime-local",
+                name="dueDate",
+                id="dueDate",
+                class="input-field",
+                placeholder="Due date">
         </div>
     
         <div class="modal-footer">
-            <button class="btn-primary">add task</button>
+            <button class="btn-primary">Add task</button>
         </div>
     
     </div>

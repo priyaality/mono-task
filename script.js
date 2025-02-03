@@ -14,7 +14,11 @@
 // const db = new Low(adapter, defaultData);
 
 function openModal() {
-    document.getElementById('modal').style.display = 'block';
-    // document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modalOverlay').style.display = 'block';
   }
 
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modalOverlay').style.display = 'none';
+  }
