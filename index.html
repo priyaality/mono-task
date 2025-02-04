@@ -30,7 +30,16 @@
             <div class="tasks-list">
                 <div class="task-item">
                     <i class="icon ph-thin ph-circle"></i>
+                    <div class="task-content">
+                        <p class="task-name">Task name shows up here.</p>
+                        <p class="task-description">This is the description of this task This is the description of this task This is the description of this task.</p>
+                    </div>
+                    
+                </div>
+                <div class="task-item">
+                    <i class="icon ph-thin ph-circle" onclick="completeTask()"></i> 
                     <p class="task-content">Task name shows up here.</p>
+
                 </div>
             </div>
         </div>
@@ -47,7 +56,8 @@
             </button>
         </div>
     
-        <div class="modal-body">
+        <form action="createTask()" method="get"></form>
+        <form class="modal-body">
             <div class="combo-input">
                   <input type="text",
                     id="taskName" ,
@@ -60,16 +70,23 @@
                     class="combo-input-field",
                     placeholder="Description"></textarea>
             </div>
+            <div class="date-wrapper">
+                <label for="dueDate">Due date</label>
                 <input type="datetime-local",
                 name="dueDate",
                 id="dueDate",
                 class="input-field",
                 placeholder="Due date">
-        </div>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" value="Add task" class="btn-primary">
+            </div>
+            
+        </form>
     
-        <div class="modal-footer">
-            <button class="btn-primary">Add task</button>
-        </div>
+        <!-- <div class="modal-footer">
+            <button class="btn-primary" onclick="createTask()">Add task</button>
+        </div> -->
     
     </div>
 </body>
