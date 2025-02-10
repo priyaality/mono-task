@@ -181,12 +181,6 @@ textarea{
     z-index: 1000;
 }
 
-.modal-body{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
 .modal-header{
     display: flex;
     justify-content: space-between;
@@ -195,6 +189,15 @@ textarea{
         font-family: 'Plus Jakarta Sans';
         font-weight: 600;
     }
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-footer{
+    padding-top: 24px;
 }
 
 /* Inputs */

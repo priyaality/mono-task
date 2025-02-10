@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
-    <script src="script.js"></script>
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <title>Mono | A minimal to-do list</title>
 </head>
 <body>
@@ -55,40 +52,25 @@
                 <i class="icon ph-thin ph-x"></i>
             </button>
         </div>
-    
-        <form action="createTask()" method="get"></form>
-        <form class="modal-body">
-            <div class="combo-input">
-                  <input type="text",
-                    id="taskName" ,
-                    name="taskName" ,
-                    class="combo-input-field",
-                    placeholder="Task name">
-                  <textarea type="text",
-                    id="taskDescription",
-                    name="taskDescription",
-                    class="combo-input-field",
-                    placeholder="Description"></textarea>
-            </div>
-            <div class="date-wrapper">
-                <label for="dueDate">Due date</label>
-                <input type="datetime-local",
-                name="dueDate",
-                id="dueDate",
-                class="input-field",
-                placeholder="Due date">
+        <form id="taskForm">
+            <div class="modal-body">
+                <div class="combo-input">
+                    <input type="text" id="taskName" name="taskName" class="combo-input-field" placeholder="Task name">
+                    <textarea type="text" id="description" name="description" class="combo-input-field" placeholder="Description"></textarea>
+                </div>
+                <div class="date-wrapper">
+                    <label for="dueDate">Due date</label>
+                    <input type="datetime-local" name="dueDate" id="dueDate" class="input-field" placeholder="Due date">
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" value="Add task" class="btn-primary">
+                <button type="submit" class="btn-primary">Add Task</button>
             </div>
-            
         </form>
-    
-        <!-- <div class="modal-footer">
-            <button class="btn-primary" onclick="createTask()">Add task</button>
-        </div> -->
-    
     </div>
 </body>
 
+<script src="script.js"></script>
+<!-- Phosphor Icons -->
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </html>
