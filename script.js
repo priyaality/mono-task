@@ -8,7 +8,7 @@ function closeModal() {
   document.getElementById('modalOverlay').style.display = 'none';
 }
 
-  const taskForm = document.getElementById('taskForm');
+const taskForm = document.getElementById('taskForm');
 
   taskForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -17,8 +17,7 @@ function closeModal() {
       description: document.getElementById('description').value,
       dueDate: document.getElementById('dueDate').value,
     };
-    // console.log('Form submitted:', formData);
-    //store the data to backend
+    console.log('Form submitted:', formData);
     closeModal();
   });
 
@@ -26,8 +25,3 @@ function completeTask(){
   // change the icon to a filled radio button
   // move the task to 'completed'
 }
-
-  //push the content in the variables to the db
-  //show the contents in the db on the main screen -> showList()?
-
-// This is to process/store form data in an object, presumably every field input from the form can be accessed by saying formData.name, formData.dueDate, etc..
